@@ -1,0 +1,249 @@
+:root {
+  --sena-orange: #FF6B00;
+  --sena-orange-dark: #C44E00;
+  --bg-main: #0F1115;
+  --bg-card: #1B1E26;
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --border-color: #262B36;
+  --radius-modern: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Header y Botón Regresar --- */
+header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.btn-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+
+header h1 span {
+  color: var(--sena-orange);
+}
+
+header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* --- Controles de Filtro y Búsqueda --- */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.search-bar {
+  width: 100%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-modern);
+  padding: 0.8rem 1.2rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: var(--sena-orange);
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-modern);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover, .btn.active {
+  background-color: var(--sena-orange);
+  border-color: var(--sena-orange);
+  color: var(--text-primary);
+}
+
+/* --- Grid del Glosario --- */
+.glossary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-modern);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--sena-orange-dark);
+}
+
+.card-header {
+  margin-bottom: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  background-color: rgba(255, 107, 0, 0.1);
+  color: var(--sena-orange);
+  border: 1px solid rgba(255, 107, 0, 0.2);
+}
+
+.card.marketing .badge {
+  background-color: rgba(156, 163, 175, 0.1);
+  color: var(--text-secondary);
+  border: 1px solid rgba(156, 163, 175, 0.2);
+}
+
+.term-en {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.term-es {
+  font-size: 1rem;
+  color: var(--sena-orange);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.definition {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Adaptación Responsiva)
+   ========================================================================== */
+
+/* 1. Ajustes para Tablets y Pantallas Medianas (Mínimo 768px) */
+@media (min-width: 768px) {
+  .controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-bar {
+    flex: 1;
+  }
+
+  .glossary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2. Ajustes para Pantallas de Escritorio (Mínimo 1024px) */
+@media (min-width: 1024px) {
+  .glossary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 3. Optimizaciones Críticas para Celulares (Máximo 768px) */
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0; 
+  }
+
+  .btn-back {
+    position: static; /* Rompe el absoluto para evitar colisiones con el título */
+    transform: none;
+    order: -1; /* Fuerza al botón a renderizarse arriba del H1 */
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* 4. Ajustes finos para Celulares Pequeños (Máximo 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 1.5rem 0.75rem; /* Más espacio útil en pantalla */
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* Evita saltos de línea huérfanos en el título */
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  .filter-buttons {
+    justify-content: center; /* Centra los botones si se envuelven */
+  }
+
+  .btn {
+    flex: 1 1 auto; /* Los botones crecen equitativamente para ser más táctiles */
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

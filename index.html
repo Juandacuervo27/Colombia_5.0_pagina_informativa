@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Colombia 5.0</title>
+    <link rel="icon" href="IMG/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css"> 
+    <style>
+        /* CSS mínimo para la lógica de pestañas*/
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-brand">
+            <img src="IMG/logo-sena-naranja.43e61d0f.svg" alt="Logo de Colombia 5.0" class="logo">
+            <h2 class="site-title">SENA CMTC</h2>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#" data-section="nav" data-value="home" class="tab-link">Inicio</a></li>
+                <li><a href="#" data-section="nav" data-value="about" class="tab-link">Acerca de</a></li>
+                <li><a href="#" data-section="nav" data-value="conferences" class="tab-link">Conferencias</a></li>
+                <li><a href="#" data-section="nav" data-value="glosary" class="tab-link">Glosario</a></li>
+                <li><a href="#" data-section="nav" data-value="about-us" class="tab-link">Nosotros</a></li>
+                <li><a href="#" data-section="nav" data-value="conclusion" class="tab-link">Conclusión</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-lang">
+            <span class="lang-link active">ES</span>
+            <span class="lang-separator">|</span>
+            <a href="Nueva carpeta/index.html" class="lang-link">EN</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-container">
+                <div class="hero-main-content">
+                    <h1 id="hero-title" data-key="heroTitle">Colombia 5.0</h1>
+                    <p id="hero-text" class="hero-desc" data-key="heroDescription">La estrategia nacional y el evento más importante de ecosistemas de innovación digital impulsado por el Ministerio TIC.
+                    </p>
+                    <a href="#" class="hero-btn" id="hero-btn-action" data-key="heroButton">
+                        Explorar evento
+                    </a>
+                </div>
+
+                <div class="hero-info-container">
+                    <div class="info-card">
+                        <span class="card-icon">🗺️</span>
+                        <h3 data-key="locationTitle">Ubicación</h3>
+                        <p data-key="locationText">Corferias, Bogotá</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="card-icon">🖥️</span>
+                        <h3 data-key="topicsTitle">Ejes Temáticos</h3>
+                        <p data-key="topicsText">IA, Blockchain y Ciberseguridad</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="card-icon">👤</span>
+                        <h3 data-key="guestTitle">INVITADO ESPECIAL</h3>
+                        <p data-key="guestText">SENA CMTC Cra. 30 #17B-25S, Bogotá</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="home" class="tab-content active">
+            <h2>Colombia 5.0: La Revolución Tecnológica Bajo la Lupa de un Aprendiz</h2>
+            
+            <p class="tab-intro-text">
+                Esta plataforma nace de mi experiencia recorriendo los pabellones de Corferias durante el evento Colombia 5.0. Como estudiante de desarrollo de software, este espacio no fue solo una feria de tecnología, sino una ventana al futuro digital del país y un desafío directo a los conocimientos que construimos día a día en el aula.
+            </p>
+            
+            <div class="info-extra-grid">
+                <div class="extra-text-block">
+                    <h3>Mi Perspectiva del Evento</h3>
+                    <p>
+                        A lo largo de las conferencias y muestras tecnológicas, pude analizar cómo la inteligencia artificial, el desarrollo backend y las arquitecturas en la nube están dejando de ser conceptos teóricos para convertirse en soluciones reales en la industria colombiana. En este sitio web comparto mi opinión sincera, mis apuntes y las dudas que surgieron al ver la magnitud de la transformación digital actual.
+                    </p>
+                </div>
+                <div class="extra-image-block">
+                    <img src="https://img.impactotic.co/wp-content/uploads/2026/05/Colombia-5.0-llega-a-Bogota-este-mayo-de-20206.jpg" alt="Innovación tecnológica Colombia" class="responsive-img">
+                </div>
+            </div>
+
+            <div class="info-extra-grid" style="margin-top: 2rem;">
+                <div class="extra-image-block">
+                    <img src="IMG/Fotos conferencias/Conferencia8.jpeg" alt="Estudiantes analizando código" class="responsive-img">
+                </div>
+                <div class="extra-text-block">
+                    <h3>Objetivo de esta Bitácora</h3>
+                    <p>
+                        El objetivo de esta página es estructurar nuestras reflexiones técnicas sobre los eventos clave de Colombia 5.0. A través de las siguientes secciones, encontrarás un análisis crítico de las conferencias que más impactaron nuestra visión profesional, un glosario especializado con los términos que dominaron el evento y mi conclusión sobre el papel fundamental que jugamos los desarrolladores de software en este nuevo ecosistema.
+                    </p>
+                </div>
+            </div>
+
+            <div class="quick-nav-container">
+                <h3>Continúa explorando la bitácora</h3>
+                <div class="quick-nav-grid">
+                    <a href="#" data-section="nav" data-value="about" class="tab-link quick-nav-card">
+                        <span>Acerca de</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conferences" class="tab-link quick-nav-card">
+                        <span>Conferencias</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="glosary" class="tab-link quick-nav-card">
+                        <span>Glosario</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="about-us" class="tab-link quick-nav-card">
+                        <span>Nosotros</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conclusion" class="tab-link quick-nav-card">
+                        <span>Conclusión</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="tab-content">
+            <h2 data-key="aboutTitle">Acerca de la Experiencia: Colombia 5.0</h2>
+            <p class="tab-intro-text" data-key="aboutIntro">
+                Asistir a <strong>Colombia 5.0</strong> en Corferias como invitado fue una inmersión total en el futuro digital de nuestro país. Este encuentro nacional, liderado por el <strong>Ministerio TIC</strong>, representa la evolución tecnológica de la nación: el paso de la automatización industrial (4.0) hacia la consolidación de una <em>Sociedad 5.0</em>, donde la innovación, el software y la conectividad se diseñan con un sentido profundamente humano y territorial. Como aprendiz del SENA, este espacio se convirtió en el escenario ideal para contrastar la teoría del aula con los desafíos reales del sector productivo.
+            </p>
+            
+            <div class="info-extra-grid">
+                <div class="extra-text-block">
+                    <h3>El Epicentro de la Transformación Digital</h3>
+                    <p>
+                        Durante dos jornadas intensas, Corferias reunió a más de 13,000 asistentes entre expertos internacionales, grandes empresas, comunidades tecnológicas y academia. El evento no se limitó a muestras comerciales convencionales; fue un laboratorio vivo estructurado bajo la <strong>Misión de Transformación Digital 2035</strong>, abordando el impacto de las tecnologías emergentes en la productividad, la educación y el tejido social de las regiones colombianas.
+                    </p>
+                    <p>
+                        Uno de los ejes más robustos fue el despliegue del <em>W3 Channel</em>, un espacio dedicado exclusivamente a desmitificar y aplicar las tecnologías que están construyendo la nueva arquitectura de internet descentralizada, abriendo un abanico infinito de posibilidades para quienes nos formamos en el desarrollo de soluciones digitales.
+                    </p>
+                </div>
+                <div class="extra-image-block">
+                    <img src="IMG/Fotos conferencias/Conferencia1.jpeg" alt="Inmersión digital y tendencias tecnológicas en Colombia 5.0 Corferias" class="responsive-img">
+                </div>
+            </div>
+
+            <div class="event-highlights">
+                <h3>Ejes Tecnológicos y Tendencias Observadas</h3>
+                <p class="section-sub">Los núcleos temáticos de la feria que marcan la pauta para la arquitectura de software del mañana:</p>
+                
+                <div class="highlights-grid">
+                    <div class="pillar-card">
+                        <h4>Ecosistema Web3 y Blockchain</h4>
+                        <p>Análisis de tecnologías descentralizadas aplicadas a contratos inteligentes, criptoactivos y modelos de gobernanza digital descentralizada que prometen transformar la trazabilidad y la seguridad en el backend moderno.</p>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <h4>Inteligencia Artificial con Sentido Humano</h4>
+                        <p>Paneles sobre la implementación ética de la IA, algoritmos predictivos y el impacto de los LLMs en sectores estratégicos como la educación (Edutech), las finanzas (Fintech) y la salud (SaludTech).</p>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <h4>Ciberseguridad y Entornos Seguros</h4>
+                        <p>Talleres interactivos liderados por expertos técnicos (como el ColCERT) enfocados en la protección de datos, la resiliencia de la infraestructura en la nube y las buenas prácticas de desarrollo seguro.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="extra-text-block student-reflection">
+                <h3>La Perspectiva del Aprendiz SENA</h3>
+                <p>
+                    Vivir Colombia 5.0 en calidad de espectador e invitado me permitió tomar distancia de las líneas de código cotidianas de mis entornos de desarrollo para entender el "para qué" de lo que construimos. Ver la magnitud de las ruedas de empleo del sector TIC y escuchar conferencias sobre <em>Power Skills</em> (marcas personales y liderazgo en la industria) me dio un mapa de ruta clarísimo sobre el perfil técnico y humano que el mercado global exige. 
+                </p>
+                <p>
+                    Esta experiencia reafirma que el análisis y desarrollo de software no es un fin en sí mismo, sino una herramienta de transformación. Salí de Corferias motivado no solo a dominar lenguajes de programación y optimizar bases de datos, sino a idear soluciones eficientes y escalables que tengan la capacidad de resolver problemas reales en nuestras comunidades.
+                </p>
+            </div>
+
+            <div class="quick-nav-container">
+                <h3 data-key="continueExploring">Continúa explorando la bitácora</h3>
+                <div class="quick-nav-grid">
+                    <a href="#" data-section="nav" data-value="about" class="tab-link quick-nav-card">
+                        <span data-key="quickAbout">Acerca de</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conferences" class="tab-link quick-nav-card">
+                        <span data-key="quickConferences">Conferencias</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="glosary" class="tab-link quick-nav-card">
+                        <span data-key="quickGlosary">Glosario</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="about-us" class="tab-link quick-nav-card">
+                        <span data-key="quickAboutUs">Nuestra Empresa</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conclusion" class="tab-link quick-nav-card">
+                        <span data-key="quickConclusion">Conclusión</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="conferences" class="tab-content">
+            
+            
+            <div class="info-extra-grid">
+                <div class="extra-text-block">
+                    <h2>Conferencias Académicas</h2>
+                    <p class="tab-intro-text">Crónicas, reflexiones y material multimedia de las ponencias clave en Colombia 5.0.</p>
+                    <p><b>Agenda Académica:</b> Revisión técnica y análisis crítico de los ciclos de conferencias y talleres enfocados en soberanía tecnológica y desarrollo industrial.</p>
+                </div>
+                <div class="extra-image-block">
+                    <img src="IMG/Fotos conferencias/Conferencia7.jpeg" alt="Auditorio de conferencias" class="responsive-img">
+                </div>
+            </div>
+
+            <div class="conferences-wrapper">
+                <article class="conference-card">
+                    <div class="card-badge">Tema Principal: Software y Hardware Libre</div>
+                    <h3 class="conference-title">Open Source: La Revolución Tecnológica</h3>
+                    <p class="conference-speaker"><strong>Conferencista:</strong> Javier Garzón. <br>Tecnólogo en mecatrónica del SENA. Licenciado en Diseño Tecnológico de la Universidad Pedagógica Nacional.</p>
+                    
+                    <div class="conference-reflection">
+                        <h4>Resumen y Escrito Reflexivo</h4>
+                        <p>
+                            La ponencia ofreció un recorrido exhaustivo por el ecosistema global del código abierto, demostrando que las tecnologías libres van mucho más allá de una alternativa gratuita: representan autonomía e infraestructura estratégica. El expositor, con gran carisma y dominio práctico, enseñó cómo diversos programas, empresas consolidadas y maquinaria basada en hardware libre están transformando la industria actual.
+                        </p>
+                        <p>
+                            La reflexión central de la charla giró en torno a por qué la adopción de software libre debe ser considerada una capacidad indispensable para cualquier empresa moderna. Depender de licencias privativas limita la escalabilidad y la soberanía de los datos. Como futuros desarrolladores, entender el hardware y software libre nos abre las puertas a auditar código, personalizar herramientas a gran escala y proponer soluciones robustas sin costes de licenciamiento restrictivos.
+                        </p>
+                    </div>
+
+                    <div class="conference-keywords-box">
+                        <h4>Palabras Clave Identificadas</h4>
+                        <div class="tags-container">
+                            <span class="tag">Software Libre</span>
+                            <span class="tag">Hardware Abierto</span>
+                            <span class="tag">Soberanía Tecnológica</span>
+                            <span class="tag">Código Abierto</span>
+                            <span class="tag">Infraestructura Empresa</span>
+                        </div>
+                    </div>
+
+                    <div class="photos-gallery-grid">
+                            <img src="IMG/Fotos conferencias/Conferencia1.jpeg" alt="Ingreso al panel de la industria del videojuego" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia2.jpeg" alt="Exposición sobre plataformas de distribución indie" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia10.jpeg" alt="Explicación de trucos publicitarios para redes sociales" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia3.jpeg" alt="Asistentes analizando métricas de audiencia" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia4.jpeg" alt="Ronda de preguntas sobre monetización" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia7.jpeg" alt="Muestra de proyectos de videojuegos locales" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia14.jpeg" alt="Intercambio de ideas entre aprendices del SENA" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia13.jpeg" alt="Revisión de plataformas de lanzamiento" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia6.jpeg" alt="Debate sobre el enfoque comercial vs técnico" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia11.jpeg" alt="Cierre de la jornada técnica de bitácora" class="gallery-thumb">
+                    </div>
+
+                    <div class="conference-media-section">
+                        <h4>Contenido Multimedia</h4>
+                        <div class="videos-grid">
+                            <div class="video-card">
+                                <div class="video-responsive">
+                                    <iframe src="https://www.youtube.com/embed/MbcD9dKiM-o?si=Hc_l78m7wqrQrPAi" title="Ponencia Código Abierto Parte 1" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <p class="media-caption">Contenido multimedia - Parte 1</p>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-responsive">
+                                    <iframe src="https://www.youtube.com/embed/M1k4n7g4OwY?si=7T2dss7mp0Bjinu8" title="Ponencia Código Abierto Parte 2" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <p class="media-caption">Contenido multimedia - Parte 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="conference-card">
+                    <div class="card-badge">Tema Principal: Industria de Videojuegos y Marca Personal</div>
+                    <h3 class="conference-title">Marketing digital en la Industria de Videojuegos</h3>
+                    <p class="conference-speaker"><strong>Conferencista:</strong> Agustina Florencia <br>Especialista en Marketing Digital - Argentina</p>
+                    
+                    <div class="conference-reflection">
+                        <h4>Resumen y Escrito Reflexivo</h4>
+                        <p>
+                            En esta sesión se abordaron los canales de difusión, trucos y plataformas clave que existen en el mercado actual para que los desarrolladores independientes logren dar a conocer sus proyectos en la competitiva industria de los videojuegos. La expositora detalló estrategias de posicionamiento y redes sociales fundamentales para la monetización y el alcance de audiencia.
+                        </p>
+                        <p>
+                            Como análisis crítico, si bien la charla arrojó pautas metodológicas útiles sobre marketing, el enfoque resultó un tanto simplista y plano en la ejecución técnica. Se percibió una notable desconexión entre el discurso comercial y la cultura real del desarrollo de videojuegos, evidenciando que la expositora no poseía un trasfondo profundo como jugadora o desarrolladora directa. Esto nos deja como lección que para triunfar en este sector no basta con aplicar fórmulas genéricas de marketing; se requiere un entendimiento orgánico del producto, la jugabilidad y la comunidad a la que se apunta.
+                        </p>
+                    </div>
+
+                    <div class="conference-keywords-box">
+                        <h4>Palabras Clave Identificadas</h4>
+                        <div class="tags-container">
+                            <span class="tag">Industria Gaming</span>
+                            <span class="tag">Marca Personal</span>
+                            <span class="tag">Plataformas de Difusión</span>
+                            <span class="tag">Marketing Digital</span>
+                            <span class="tag">Análisis Crítico</span>
+                        </div>
+                    </div>
+
+                    <div class="conference-media-section">
+                        <h4>Contenido Multimedia (Galería Fotográfica de la Muestra - 10 Fotos)</h4>
+                        <div class="photos-gallery-grid">
+                            <img src="IMG/Fotos conferencias/Conferencia1.jpeg" alt="Ingreso al panel de la industria del videojuego" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia2.jpeg" alt="Exposición sobre plataformas de distribución indie" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia10.jpeg" alt="Explicación de trucos publicitarios para redes sociales" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia3.jpeg" alt="Asistentes analizando métricas de audiencia" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia4.jpeg" alt="Ronda de preguntas sobre monetización" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia7.jpeg" alt="Muestra de proyectos de videojuegos locales" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia14.jpeg" alt="Intercambio de ideas entre aprendices del SENA" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia13.jpeg" alt="Revisión de plataformas de lanzamiento" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia6.jpeg" alt="Debate sobre el enfoque comercial vs técnico" class="gallery-thumb">
+                            <img src="IMG/Fotos conferencias/Conferencia11.jpeg" alt="Cierre de la jornada técnica de bitácora" class="gallery-thumb">
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+                        <div class="quick-nav-container">
+                <h3 data-key="continueExploring">Continúa explorando la bitácora</h3>
+                <div class="quick-nav-grid">
+                    <a href="#" data-section="nav" data-value="about" class="tab-link quick-nav-card">
+                        <span data-key="quickAbout">Acerca de</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conferences" class="tab-link quick-nav-card">
+                        <span data-key="quickConferences">Conferencias</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="glosary" class="tab-link quick-nav-card">
+                        <span data-key="quickGlosary">Glosario</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="about-us" class="tab-link quick-nav-card">
+                        <span data-key="quickAboutUs">Nuestra Empresa</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conclusion" class="tab-link quick-nav-card">
+                        <span data-key="quickConclusion">Conclusión</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="tab-content">
+            <h2>Conclusión y Reflexión Ética</h2>
+            <p class="tab-intro-text"><strong>Reflexión: </strong> ¿Cómo se implementa la ética en la tecnología empresarial?</p>
+            
+            <div class="conclusion-content">
+                <p class="intro-reflection">
+                    La tecnología no opera en un vacío; cada línea de código desplegada en el entorno empresarial tiene el poder de transformar realidades sociales. Implementar la ética en la tecnología corporativa no es un requerimiento opcional o un mero trámite legal, sino un pilar estratégico indispensable que debe regir nuestro camino como desarrolladores a través de los siguientes ejes esenciales:
+                </p>
+
+                <div class="ethical-grid">
+                    <div class="ethical-item">
+                        <h5>Inteligencia Artificial</h5>
+                        <p>En el ámbito empresarial, los algoritmos predictivos automatizan decisiones críticas. Implementar la ética aquí exige auditorías constantes para evitar sesgos discriminatorios y garantizar la transparencia algorítmica, asegurando que la IA actúe como un apoyo equitativo.</p>
+                    </div>
+
+                    <div class="ethical-item">
+                        <h5>Uso Responsable de Datos</h5>
+                        <p>La recolección de información debe regirse bajo principios de consentimiento explícito, minimización de datos y almacenamiento seguro, protegiendo celosamente la privacidad y dignidad digital de los usuarios.</p>
+                    </div>
+
+                    <div class="ethical-item">
+                        <h5>Automatización</h5>
+                        <p>Optimizar procesos eleva la productividad, pero transforma el mercado laboral. Las empresas éticas adoptan la automatización no para desplazar masivamente al capital humano, sino para potenciarlo mediante la reconversión profesional.</p>
+                    </div>
+
+                    <div class="ethical-item">
+                        <h5>Impacto Social de la Tecnología</h5>
+                        <p>La innovación debe mitigar la brecha digital en lugar de ampliarla. El desarrollo de ecosistemas digitales debe priorizar la inclusión, la accesibilidad universal y el beneficio del tejido social del país.</p>
+                    </div>
+                </div>
+
+                <div class="professional-responsibility-box">
+                    <h4>Responsabilidad Profesional en el Desarrollo de Software</h4>
+                    <p>
+                        Como futuros analistas y desarrolladores de software, nuestra responsabilidad va más allá de lograr que un programa compile o que una base de datos responda eficientemente con un <code>INNER JOIN</code>. Somos los arquitectos de las reglas invisibles que rigen la sociedad digital. Adoptar una postura ética implica tener el valor técnico y moral de rechazar malas prácticas, priorizar la seguridad perimetral desde el diseño (Security by Design) y entender que el software de calidad es, ante todo, un software que respeta y protege al ser humano.
+                    </p>
+                </div>
+            </div>
+
+            <div class="quick-nav-container">
+                <h3 data-key="continueExploring">Continúa explorando la bitácora</h3>
+                <div class="quick-nav-grid">
+                    <a href="#" data-section="nav" data-value="about" class="tab-link quick-nav-card">
+                        <span data-key="quickAbout">Acerca de</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conferences" class="tab-link quick-nav-card">
+                        <span data-key="quickConferences">Conferencias</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="glosary" class="tab-link quick-nav-card">
+                        <span data-key="quickGlosary">Glosario</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="about-us" class="tab-link quick-nav-card">
+                        <span data-key="quickAboutUs">Nuestra Empresa</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conclusion" class="tab-link quick-nav-card">
+                        <span data-key="quickConclusion">Conclusión</span>
+                    </a>
+                </div>
+        </section>
+
+        <section id="about-us" class="tab-content">
+            <h2>Nosotros</h2>
+            <p class="tab-intro-text">El equipo de desarrolladores y aprendices detrás de la plataforma informativa de Colombia 5.0.</p>
+            
+            <div class="info-extra-grid">
+                <div class="extra-text-block">
+                    <h3>Talento SENA en Acción</h3>
+                    <p>Somos un grupo de aprendices apasionados por la tecnología, actualmente formándonos en el programa de <strong>Análisis y Desarrollo de Software</strong> del SENA (Servicio Nacional de Aprendizaje). Nuestra institución se caracteriza por promover el aprendizaje práctico y enfocado en proyectos reales, lo que nos motiva a ir más allá del aula de clase para comprender cómo la tecnología está transformando el mundo actual.</p>
+                    <p>Este sitio web nace como una iniciativa académica y profesional para consolidar las competencias adquiridas en nuestro ambiente de formación, demostrando el potencial técnico y analítico que el SENA aporta a la industria del software en Colombia.</p>
+                </div>
+                <div class="extra-image-block">
+                    <img src="IMG/Foto grupal.jpeg" alt="Equipo de desarrollo de software" class="responsive-img">
+                </div>
+            </div>
+
+            <div class="info-extra-grid" style="margin-top: 40px;"> <div class="extra-image-block">
+                    <img src="IMG/Fotos conferencias/Conferencia9.jpeg" alt="Evento de Tecnología e Innovación" class="responsive-img">
+                </div>
+                <div class="extra-text-block">
+                    <h3>De la Formación a la Industria</h3>
+                    <p>Nuestra asistencia al evento <strong>Colombia 5.0</strong> en Corferias marcó un hito en nuestro proceso formativo. Estar en contacto directo con las últimas tendencias en innovación digital, inteligencia artificial, desarrollo cloud y transformación tecnológica nos permitió dimensionar el impacto real de la carrera que elegimos.</p>
+                    <p>El objetivo principal de esta sección y de la página en general es documentar de manera interactiva los aprendizajes, conferencias y soluciones tecnológicas que presenciamos. Queremos compartir nuestra perspectiva como la nueva generación de desarrolladores que dinamizará el ecosistema digital del país, dejando en alto el nombre de nuestra institución.</p>
+                </div>
+            </div>
+
+            <div class="quick-nav-container">
+                <h3 data-key="continueExploring">Continúa explorando la bitácora</h3>
+                <div class="quick-nav-grid">
+                    <a href="#" data-section="nav" data-value="about" class="tab-link quick-nav-card">
+                        <span data-key="quickAbout">Acerca de</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conferences" class="tab-link quick-nav-card">
+                        <span data-key="quickConferences">Conferencias</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="glosary" class="tab-link quick-nav-card">
+                        <span data-key="quickGlosary">Glosario</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="about-us" class="tab-link quick-nav-card">
+                        <span data-key="quickAboutUs">Nosotros</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conclusion" class="tab-link quick-nav-card">
+                        <span data-key="quickConclusion">Conclusión</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="glosary" class="tab-content">
+            
+            <h2>Glosario Tecnológico</h2>
+            <p class="tab-intro-text">Definiciones clave de términos relacionados con Colombia 5.0.</p>
+            
+            <div class="info-extra-grid">
+                <div class="extra-text-block">
+                    <h3>Conceptos Esenciales</h3>
+                    <ul>
+                        <li><strong>Inteligencia Artificial (IA):</strong> Rama de la informática que se ocupa de crear sistemas capaces de realizar tareas que normalmente requieren inteligencia humana.</li>
+                        <li><strong>Blockchain:</strong> Tecnología de registro distribuido que garantiza la seguridad y transparencia en transacciones digitales.</li>
+                        <li><strong>Ciberseguridad:</strong> Prácticas y tecnologías diseñadas para proteger sistemas, redes y datos de ataques digitales.</li>
+                        <li><strong>Transformación Digital:</strong> Integración de tecnología digital en todas las áreas de una empresa o institución, cambiando fundamentalmente cómo operan y entregan valor a los clientes.</li>
+                    </ul>
+                    <br>
+                    <a href="Glosario/index.html" class="glosary-link">Explorar Glosario Completo</a>
+                </div>
+                <div class="extra-image-block">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Glosario tecnológico" class="responsive-img">
+                </div>
+            </div>
+
+            <div class="quick-nav-container">
+                <h3 data-key="continueExploring">Continúa explorando la bitácora</h3>
+                <div class="quick-nav-grid">
+                    <a href="#" data-section="nav" data-value="about" class="tab-link quick-nav-card">
+                        <span data-key="quickAbout">Acerca de</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conferences" class="tab-link quick-nav-card">
+                        <span data-key="quickConferences">Conferencias</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="glosary" class="tab-link quick-nav-card">
+                        <span data-key="quickGlosary">Glosario</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="about-us" class="tab-link quick-nav-card">
+                        <span data-key="quickAboutUs">Nosotros</span>
+                    </a>
+                    <a href="#" data-section="nav" data-value="conclusion" class="tab-link quick-nav-card">
+                        <span data-key="quickConclusion">Conclusión</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SENA CMTC Todos los derechos reservados.</p>
+        <div class="header-lang">
+            <span class="lang-link active">ES</span>
+            <span class="lang-separator">|</span>
+            <a href="Nueva carpeta/index.html" class="lang-link">EN</a>
+        </div>
+    </footer>
+    <script src="JS/script.js"></script>    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Buscamos todas las tarjetas de navegación rápida inferiores
+            document.querySelectorAll('.quick-nav-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Obtenemos el valor de la pestaña (ej. 'about', 'conferences')
+                    const targetValue = this.getAttribute('data-value');
+                    
+                    // Buscamos el link correspondiente en el header y simulamos su clic
+                    const equivalentHeaderLink = document.querySelector(`header nav a[data-value="${targetValue}"]`);
+                    
+                    if (equivalentHeaderLink) {
+                        equivalentHeaderLink.click();
+                        // Desplazamiento suave al inicio de la página para que se note el cambio de sección
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

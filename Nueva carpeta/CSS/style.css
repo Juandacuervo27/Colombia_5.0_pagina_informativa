@@ -1,0 +1,895 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN GLOBAL (:root & Reset)
+   ========================================================================== */
+:root {
+  --sena-orange: #FF6B00;
+  --sena-orange-dark: #C44E00;
+  --bg-main: #0F1115;
+  --bg-card: #1B1E26;
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --border-color: #262B36;
+  --radius-modern: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: "Segoe UI", sans-serif;
+}
+
+h2 {
+  color: var(--sena-orange);
+  margin-bottom: 20px;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+main section:not(#hero) {
+  max-width: 1200px;
+  margin: 80px auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 50px;
+}
+
+/* Componente de Imagen Responsivo Global */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-modern);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   2. LAYOUT (Header & Footer)
+   ========================================================================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 1000;
+  background: rgba(15, 17, 21, 0.75);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  height: 70px;
+}
+
+/* Contenedor del logo y el título alineados en fila */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Controla el espacio entre el logo y el texto */
+}
+
+/* Ajuste para el título del header */
+.site-title {
+  margin-bottom: 0; /* Esto anula el margin-bottom: 20px que le diste globalmente a los h2 */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: var(--sena-orange);
+}
+
+footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  margin-top: 80px;
+}
+
+footer p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Selector de Idiomas (Flags) en Footer */
+footer .flags {
+  position: static;
+  display: flex;
+  gap: 12px;
+}
+
+footer .flags button {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: var(--radius-modern);
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+footer .flags button:hover {
+  background: var(--sena-orange);
+  border-color: var(--sena-orange);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.2);
+}
+
+/* Fallback o estado global de flags (si aplica fuera del footer) */
+.flags {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+}
+
+.flags button {
+  background: var(--sena-orange);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* ==========================================================================
+   3. SELECTOR DE IDIOMA EN EL HEADER (SIN JS)
+   ========================================================================== */
+.header-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: var(--radius-modern);
+}
+
+.lang-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Estilo para el idioma que se puede seleccionar */
+a.lang-link:hover {
+  color: var(--sena-orange);
+}
+
+/* Estilo para el idioma que ya está activo/seleccionado */
+.lang-link.active {
+  color: var(--text-primary);
+  cursor: default;
+}
+
+.lang-separator {
+  color: var(--border-color);
+  font-size: 0.9rem;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .header-lang {
+    order: 2;
+  }
+}
+
+/* ==========================================================================
+   3. SECCIÓN HERO & CONTENEDORES
+   ========================================================================== */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), 
+              url("https://visitbogota.co/sites/default/files/2026-04/FOTO%201%20CORFERIAS_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 140px 20px 60px 20px; 
+  transition: .3s ease;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+.hero-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+#hero h1 {
+  font-size: 4.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+#hero p {
+  max-width: 650px;
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: var(--sena-orange, #ff6b00);
+  color: white;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: .3s;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+  background: var(--sena-orange-dark, #cc5500);
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.5);
+}
+
+/* Tarjetas de Información (Glassmorphism) */
+.hero-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.info-card:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.info-card h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.info-card p {
+  color: #9ca3af !important;
+  font-size: 0.95rem;
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   4. MENÚ INTERACTIVO (QUICK NAV)
+   ========================================================================== */
+.quick-nav-container {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.quick-nav-container h3 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.quick-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.quick-nav-card {
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 1.2rem;
+  border-radius: var(--radius-modern);
+  border: 1px solid var(--border-color);
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-nav-card:hover {
+  color: var(--text-primary);
+  border-color: var(--sena-orange);
+  background-color: rgba(255, 107, 0, 0.05);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.1);
+}
+
+/* ==========================================================================
+   5. SECCIÓN DE INFORMACIÓN EXTRA & COMPONENTES DE PESTAÑAS
+   ========================================================================== */
+#hero-info-extra {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background: transparent;
+}
+
+.info-extra-container h2 {
+  font-size: 2.5rem;
+  color: var(--sena-orange);
+  margin-bottom: 20px;
+}
+
+.info-extra-container > p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.tab-intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: var(--text-secondary);
+}
+
+.info-extra-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.extra-text-block h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.extra-text-block p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   6. SECCIÓN CONFERENCIAS
+   ========================================================================== */
+.conferences-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.conference-card {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-modern);
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-badge {
+  display: inline-block;
+  background: rgba(255, 107, 0, 0.1);
+  color: var(--sena-orange);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 107, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.conference-title {
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.conference-speaker {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 25px;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 15px;
+}
+
+.conference-reflection h4,
+.conference-keywords-box h4,
+.conference-media-section h4 {
+  color: var(--sena-orange);
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.conference-reflection p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.conference-keywords-box {
+  margin: 25px 0;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.tag:hover {
+  border-color: var(--sena-orange);
+  color: white;
+}
+
+.conference-media-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.media-caption {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Sistema Multimedia de Conferencias (Videos e Imágenes) */
+.videos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.video-card {
+  background: var(--bg-card);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* Ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photos-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.gallery-thumb {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.04);
+  border-color: var(--sena-orange);
+}
+
+/* ==========================================================================
+   7. SECCIÓN CONCLUSIÓN ÉTICA & GLOSARIO
+   ========================================================================== */
+.intro-reflection {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  text-align: justify;
+}
+
+.ethical-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.ethical-item {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-modern);
+  padding: 25px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ethical-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 107, 0, 0.4);
+}
+
+.ethical-item h5 {
+  color: var(--sena-orange);
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.ethical-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}
+
+.professional-responsibility-box {
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.05) 0%, rgba(27, 30, 38, 0.2) 100%);
+  border-left: 4px solid var(--sena-orange);
+  border-top: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 4px 16px 16px 4px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.professional-responsibility-box h4 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.professional-responsibility-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin: 0;
+}
+
+.professional-responsibility-box code {
+  background: #000000;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #ffaa66;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.glosary-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--sena-orange);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-modern);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.glosary-link:hover {
+  background-color: var(--sena-orange);
+  color: #FFFFFF;
+  border-color: var(--sena-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
+}
+
+.glosary-link:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(255, 107, 0, 0.15);
+}
+
+.glosary-link:focus-visible {
+  outline: 2px solid var(--sena-orange);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   8. MEDIA QUERIES (Responsive Design)
+   ========================================================================== */
+
+/* Tablets en adelante (Pantallas Medianas) */
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-main-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-info-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .info-card {
+    flex: 1 1 200px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Dispositivos Móviles comunes */
+@media (max-width: 768px) {
+  .info-extra-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .photos-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+  
+  .conference-card {
+    padding: 20px;
+  }
+
+  .ethical-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Celulares Pequeños */
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-info-container {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   8. MEDIA QUERIES (Responsive Design Completamente Optimizado)
+   ========================================================================== */
+
+/* Tablets y Pantallas Medianas (Ajustes de Grid a 1 columna) */
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-main-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  #hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-info-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .info-card {
+    flex: 1 1 200px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Dispositivos Móviles Estándar (Smartphones en Vertical) */
+@media (max-width: 768px) {
+  /* Evitamos que el header fijo colapse el contenido y lo adaptamos */
+  header {
+    position: static; /* Cambia a estático para que no tape el contenido del Hero */
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: var(--bg-card);
+  }
+
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Reducción de márgenes globales para no perder espacio en pantalla chica */
+  main section:not(#hero) {
+    margin: 40px 15px;
+    padding: 25px 20px; /* Adiós a los 50px de padding que apretaban el diseño */
+    border-radius: 16px;
+  }
+
+  #hero {
+    padding: 60px 15px;
+    min-height: auto; /* Permite que el contenido defina la altura en móviles */
+  }
+
+  .info-extra-container h2 {
+    font-size: 2rem;
+  }
+
+  .info-extra-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr; /* Los videos ocupan todo el ancho disponible */
+  }
+  
+  .photos-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+  
+  .conference-card {
+    padding: 20px;
+  }
+
+  .ethical-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .professional-responsibility-box {
+    padding: 20px;
+  }
+}
+
+/* Celulares Pequeños y Pantallas Estrechas */
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 2.2rem; /* Tamaño controlado para evitar desbordes de texto */
+    letter-spacing: 1px;
+  }
+
+  #hero p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  
+  .hero-info-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .info-card:hover {
+    transform: none; /* Desactivamos movimientos en hover para evitar saltos táctiles */
+  }
+
+  /* Ajuste para el menú rápido */
+  .quick-nav-grid {
+    grid-template-columns: 1fr; /* Botones uno debajo de otro para fácil 'tap' */
+  }
+
+  .conference-title {
+    font-size: 1.3rem;
+  }
+
+  /* Control de elementos fijos problemáticos en pantallas enanas */
+  .flags {
+    position: static; /* Evitamos que el selector flotante tape texto importante abajo */
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}

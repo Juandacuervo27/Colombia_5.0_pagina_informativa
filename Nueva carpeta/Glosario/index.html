@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="IMG/favicon.ico" type="image/x-icon">
+  <title>SENA Modern Glossary - Software & Video Games</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+        <button class="btn btn-back" onclick="window.history.back()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back
+        </button>
+
+        <h1>SENA <span>Tech Glossary</span></h1>
+        <p>Free/Proprietary Software & Marketing in the Video Game Industry</p>
+    </header>
+
+
+    <div class="controls">
+      <input type="text" id="searchBar" class="search-bar" placeholder="Search concept or translation...">
+      <div class="filter-buttons">
+        <button class="btn active" onclick="filterCategory('all', this)">All</button>
+        <button class="btn" onclick="filterCategory('software', this)">Software</button>
+        <button class="btn" onclick="filterCategory('marketing', this)">Marketing</button>
+      </div>
+    </div>
+
+    <main class="glossary-grid" id="glossaryGrid">
+      
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Open Source</div>
+          <div class="term-es">Código Abierto</div>
+          <p class="definition">Software whose source code is publicly available for anyone to inspect, modify, and enhance.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Proprietary Software</div>
+          <div class="term-es">Software Propietario</div>
+          <p class="definition">Computer tools where the legal owner retains exclusive rights to use, modify, and distribute under closed licenses.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Free Software</div>
+          <div class="term-es">Software Libre</div>
+          <p class="definition">Software that respects users' freedom to run, copy, distribute, study, change, and improve the program.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Source Code</div>
+          <div class="term-es">Código Fuente</div>
+          <p class="definition">A collection of lines of text containing the steps a computer must follow, written in a human-readable programming language.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Copyleft</div>
+          <div class="term-es">Copyleft / Izquierdo de Autor</div>
+          <p class="definition">A legal practice that uses copyright laws to ensure that modified copies of a software remain free.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">EULA (End-User License Agreement)</div>
+          <div class="term-es">Acuerdo de Licencia de Usuario Final</div>
+          <p class="definition">A legal contract between the software manufacturer and the user that stipulates the conditions and restrictions of the product's use.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Vendor Lock-in</div>
+          <div class="term-es">Dependencia del Proveedor</div>
+          <p class="definition">A situation where a customer finds themselves trapped in a closed software ecosystem due to high costs or difficulties migrating to another.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Fork</div>
+          <div class="term-es">Bifurcación</div>
+          <p class="definition">The creation of an independent development project from a copy of an existing software's source code.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Repository</div>
+          <div class="term-es">Repositorio</div>
+          <p class="definition">A centralized site where the source code and version history of a project are stored and managed in an organized manner.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">DRM (Digital Rights Management)</div>
+          <div class="term-es">Gestión de Derechos Digitales</div>
+          <p class="definition">Access control technologies used by publishers and copyright owners to limit the use of digital media or devices.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Freeware</div>
+          <div class="term-es">Software Gratuito</div>
+          <p class="definition">Software distributed at no monetary cost, but which keeps its code closed and does not allow modifications.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Shareware</div>
+          <div class="term-es">Software de Evaluación</div>
+          <p class="definition">Proprietary software distributed for free with time or feature limitations so the user can evaluate it before purchasing.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Permissive License</div>
+          <div class="term-es">Licencia Permisiva</div>
+          <p class="definition">A free software license that imposes minimal restrictions on how it can be redistributed, allowing its use in proprietary software.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Upstream</div>
+          <div class="term-es">Flujo de Origen</div>
+          <p class="definition">The direction toward the main repository where bug fixes or improvements from derivative projects are sent.</p>
+        </div>
+      </article>
+
+      <article class="card software">
+        <div>
+          <div class="badge">Software</div>
+          <div class="term-en">Community-driven</div>
+          <div class="term-es">Impulsado por la Comunidad</div>
+          <p class="definition">Software projects whose direction, technical support, and development are led by volunteers rather than a single corporation.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Free-to-Play (F2P)</div>
+          <div class="term-es">Gratuito para Jugar</div>
+          <p class="definition">A business model where the base game is downloaded for free, attracting a critical mass, but is monetized through in-game purchases.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Microtransactions</div>
+          <div class="term-es">Microtransacciones</div>
+          <p class="definition">A commercial model where users acquire virtual goods (cosmetics, advantages) through low-monetary-value transactions.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Season Pass</div>
+          <div class="term-es">Pase de Temporada</div>
+          <p class="definition">A pre-sale strategy for future and current downloadable content (DLC) bundled at a promotional discount.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Early Access</div>
+          <div class="term-es">Acceso Anticipado</div>
+          <p class="definition">A marketing and funding strategy where the public pays to play an alpha/beta version to provide feedback to the developer.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Publisher</div>
+          <div class="term-es">Distribuidor / Editor</div>
+          <p class="definition">A company responsible for funding, manufacturing, promoting, and marketing video games created by development studios.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Indie Game</div>
+          <div class="term-es">Videojuego Independiente</div>
+          <p class="definition">Games developed by individuals or small groups without the financial support or direct control of a major publisher.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">AAA (Triple A)</div>
+          <div class="term-es">Triple A</div>
+          <p class="definition">An informal classification for games from major publishers with massive development and, above all, marketing budgets.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">User Acquisition (UA)</div>
+          <div class="term-es">Adquisición de Usuarios</div>
+          <p class="definition">Digital marketing processes and campaigns aimed at acquiring new players through paid ads and app store optimization.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Target Audience</div>
+          <div class="term-es">Público Objetivo / Target</div>
+          <p class="definition">A specific demographic and psychographic profile of players toward whom design and advertising efforts are directed.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Influencer Marketing</div>
+          <div class="term-es">Marketing de Influenciadores</div>
+          <p class="definition">A key strategy that uses streamers and content creators (Twitch/YouTube) to provide organic visibility to a launch.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Teaser Trailer</div>
+          <div class="term-es">Tráiler de Avance</div>
+          <p class="definition">A short video campaign to generate anticipation (hype) by revealing very few details about gameplay or story.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Beta Testing</div>
+          <div class="term-es">Prueba Beta</div>
+          <p class="definition">An open or closed development phase used as a marketing hook to test servers and consolidate the pre-existing community.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Hype</div>
+          <div class="term-es">Expectativa Desmedida</div>
+          <p class="definition">A communication strategy aimed at creating intense public expectation or excitement around a video game prior to its release.</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Retention Rate</div>
+          <div class="term-es">Tasa de Retención</div>
+          <p class="definition">A marketing metric that measures the percentage of players who continue to interact with the game after a fixed period (Day 1, 7, 30).</p>
+        </div>
+      </article>
+
+      <article class="card marketing">
+        <div>
+          <div class="badge">Marketing</div>
+          <div class="term-en">Loot Box</div>
+          <div class="term-es">Caja de Botín</div>
+          <p class="definition">An in-game randomized monetization mechanism where the user pays for surprise digital rewards without knowing the exact contents.</p>
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <script>
+    // Real-Time Dynamic Search Bar
+    const searchBar = document.getElementById('searchBar');
+    const cards = document.querySelectorAll('.card');
+
+    searchBar.addEventListener('input', () => {
+      const query = searchBar.value.toLowerCase();
+      cards.forEach(card => {
+        const textEn = card.querySelector('.term-en').textContent.toLowerCase();
+        const textEs = card.querySelector('.term-es').textContent.toLowerCase();
+        const definition = card.querySelector('.definition').textContent.toLowerCase();
+        
+        if(textEn.includes(query) || textEs.includes(query) || definition.includes(query)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+
+    // Category Filters
+    function filterCategory(category, button) {
+      // Handle active class on buttons
+      document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Visual filtering
+      cards.forEach(card => {
+        if(category === 'all') {
+          card.style.display = "flex";
+        } else {
+          if(card.classList.contains(category)) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        }
+      });
+      // Clear search bar when changing categories to prevent visual conflicts
+      searchBar.value = "";
+    }
+  </script>
+</body>
+</html>
