@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colombia 5.0</title>
     <link rel="icon" href="IMG/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="CSS/style.css"> 
@@ -22,8 +23,13 @@
             <img src="IMG/logo-sena-naranja.43e61d0f.svg" alt="Logo de Colombia 5.0" class="logo">
             <h2 class="site-title">SENA CMTC</h2>
         </div>
+
+        <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Open navigation</span>
+            <span aria-hidden="true">☰</span>
+        </button>
         
-        <nav>
+        <nav id="primary-navigation">
             <ul>
                 <li><a href="#" data-section="nav" data-value="home" class="tab-link">Home</a></li>
                 <li><a href="#" data-section="nav" data-value="about" class="tab-link">About</a></li>

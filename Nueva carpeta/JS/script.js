@@ -50,67 +50,65 @@
     const navMenu = document.querySelector("nav ul");
     const sections = document.querySelectorAll(".tab-content");
     const hero = document.getElementById("hero");
+const mobileToggle = document.querySelector(".mobile-menu-toggle");
+const headerEl = document.querySelector("header");
 
-    if (navMenu) {
+if (mobileToggle && headerEl) {
+    mobileToggle.addEventListener("click", () => {
+        const isOpen = mobileToggle.getAttribute("aria-expanded") === "true";
+        mobileToggle.setAttribute("aria-expanded", String(!isOpen));
+        headerEl.classList.toggle("mobile-open");
+    });
+}
 
-        navMenu.addEventListener("click", (e) => {
+if (navMenu) {
+    navMenu.addEventListener("click", (e) => {
+        if (e.target.classList.contains("tab-link")) {
+            e.preventDefault();
+            const targetSectionId = e.target.getAttribute("data-value");
 
-            if (e.target.classList.contains("tab-link")) {
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
 
-                e.preventDefault();
-
-                const targetSectionId =
-                    e.target.getAttribute("data-value");
-
-                // Oculta todas las secciones
-                sections.forEach(section => {
-                    section.classList.remove("active");
-                });
-
-                // Muestra la sección seleccionada
-                const activeSection =
-                    document.getElementById(targetSectionId);
-
-                if (activeSection) {
-                    activeSection.classList.add("active");
-                }
-
-                // ==========================================
-                // CAMBIO DEL HERO
-                // ==========================================
-
-                if (heroData[targetSectionId]) {
-
-                    const h1 = hero.querySelector("h1");
-                    // SOLUCIÓN: Buscamos específicamente la clase .hero-desc para que no se confunda con los párrafos de las tarjetas informativas
-                    const p = hero.querySelector(".hero-desc"); 
-
-                    if (h1) {
-                        h1.textContent = heroData[targetSectionId].title;
-                    }
-
-                    if (p) {
-                        p.textContent = heroData[targetSectionId].text;
-                    }
-
-                    hero.style.background = `
-                        linear-gradient(
-                            rgba(0,0,0,.65),
-                            rgba(0,0,0,.65)
-                        ),
-                        url('${heroData[targetSectionId].image}')
-                    `;
-
-                    hero.style.backgroundSize = "cover";
-                    hero.style.backgroundPosition = "center";
-                    hero.style.backgroundAttachment = "fixed";
-                }
-
+            const activeSection = document.getElementById(targetSectionId);
+            if (activeSection) {
+                activeSection.classList.add("active");
             }
 
-        });
+            if (heroData[targetSectionId]) {
+                const h1 = hero.querySelector("h1");
+                const p = hero.querySelector(".hero-desc");
 
-    };
+                if (h1) {
+                    h1.textContent = heroData[targetSectionId].title;
+                }
+                if (p) {
+                    p.textContent = heroData[targetSectionId].text;
+                }
+
+                hero.style.background = `
+                    linear-gradient(
+                        rgba(0,0,0,.65),
+                        rgba(0,0,0,.65)
+                    ),
+                    url('${heroData[targetSectionId].image}')
+                `;
+
+                hero.style.backgroundSize = "cover";
+                hero.style.backgroundPosition = "center";
+                hero.style.backgroundAttachment = window.innerWidth <= 768 ? "scroll" : "fixed";
+            }
+
+            if (window.innerWidth <= 900 && headerEl && headerEl.classList.contains("mobile-open")) {
+                headerEl.classList.remove("mobile-open");
+                if (mobileToggle) {
+                    mobileToggle.setAttribute("aria-expanded", "false");
+                }
+            }
+        }
+    });
+}
 
 // ==========================================
 // CONTROL DEL BOTÓN "EXPLORAR EVENTO"
